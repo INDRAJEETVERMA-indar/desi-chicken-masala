@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desi Chicken Masala</title>
+<meta name="description" content="Desi Chicken Masala - Premium dining experience. Order online or book your table today.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.logo{
+color:#ff4d4d;
+font-size:22px;
+font-weight:700;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff4d4d;
+}
+
+.menu-toggle{
+display:none;
+font-size:25px;
+cursor:pointer;
+color:white;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#ff4d4d;
+color:white;
+text-decoration:none;
+margin-top:20px;
+border-radius:5px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#e60000;
+}
+
+.section{
+padding:100px 40px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:30px;
+font-size:32px;
+}
+
+.menu-grid{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+}
+
+.card{
+background:white;
+padding:25px;
+width:260px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+opacity:0;
+transform:translateY(50px);
+transition:0.6s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+iframe{
+width:100%;
+height:300px;
+border:0;
+margin-top:25px;
+border-radius:10px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:22px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+nav{
+display:none;
+flex-direction:column;
+background:#111;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+padding:20px;
+}
+nav.active{
+display:flex;
+}
+.menu-toggle{
+display:block;
+}
+.hero h1{
+font-size:32px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">DCM</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Luxury Taste Experience</h1>
+<p>Fresh Ingredients • Expert Chefs • Fast Delivery</p>
+<a href="https://wa.me/919140201595" class="btn" target="_blank">Order on WhatsApp</a>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>Desi Chicken Masala offers a premium dining experience with authentic flavors and high-quality ingredients. Dine-in, takeaway, and home delivery available.</p>
+</section>
+
+<section class="section" id="menu">
+<h2>Our Special Menu</h2>
+<div class="menu-grid">
+<div class="card">
+<h3>Chicken Fry</h3>
+<p>₹299</p>
+</div>
+<div class="card">
+<h3>Fish Fry</h3>
+<p>₹199</p>
+</div>
+<div class="card">
+<h3>Chicken Cury</h3>
+<p>₹349</p>
+</div>
+<div class="card">
+<h3>Fish cury</h3>
+<p>₹249</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+
+<form action="https://formsubmit.co/desichickenmasala@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+
+<iframe 
+src="https://www.google.com/maps?q=Desi+Chicken+Maza+Jankipuram+Lucknow&output=embed">
+</iframe>
+
+
+<footer>
+<p>© 2026 Desi Chicken Masala | All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/919140201595" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("active");
+}
+
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const position = card.getBoundingClientRect().top;
+const screen = window.innerHeight;
+if(position < screen - 100){
+card.style.opacity = 1;
+card.style.transform = "translateY(0)";
+}
+});
+});
+</script>
+
+</body>
+</html>
